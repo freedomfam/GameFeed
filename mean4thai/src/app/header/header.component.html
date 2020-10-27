@@ -1,0 +1,79 @@
+<!-- <header>
+  <mat-toolbar color="primary">
+    <a routerLink="/" class="logo"></a>
+    <span class="example-spacer"></span>
+    <a class="links side" routerLink="/auth/login" *ngIf="!user">Login</a>
+    <div>
+      <a class="links side" *ngIf="user" [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>{{ user.fullname }}
+      </a>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngIf="user?.isAdmin" routerLink="/admin">admin</button>
+        <button mat-menu-item (click)="logout()">logout</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+</header> -->
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<header>
+  <!-- <mat-toolbar color="primary">
+    <a routerLink="/" class="logo"></a>
+    <span class="example-spacer"></span>
+    <a class="links side" routerLink="/auth/login" *ngIf="!user">Login</a>
+    <div>
+      <a class="links side" *ngIf="user" [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>{{ user.fullname }}
+      </a>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngIf="user?.isAdmin" routerLink="/admin">admin</button>
+        <button mat-menu-item (click)="logout()">logout</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar> -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a routerLink="/" class="logo"></a>
+    <!-- <a class="navbar-brand" >แหล่งรวบรวมข้อมูลเกม</a> -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/createposts">CreatPosts</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="TagGame" placeholder="TagGame" aria-label="TagGame">
+          <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </ul>
+      <span class="example-spacer"></span>
+      <a class="collapse navbar-collapse" class="form-inline my-2 my-lg-0" class="btn btn-outline-info" routerLink="/auth/login" *ngIf="!user">Login</a>
+      <div>
+        <a class="collapse navbar-collapse" class="form-inline my-2 my-lg-0" *ngIf="user" [matMenuTriggerFor]="menu">
+          <mat-icon>account_circle</mat-icon>{{ user.fullname }}
+        </a>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item *ngIf="user?.isAdmin" routerLink="/admin">admin</button>
+          <button mat-menu-item (click)="logout()">logout</button>
+        </mat-menu>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+

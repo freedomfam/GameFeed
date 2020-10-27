@@ -1,0 +1,41 @@
+<div class="content">
+    <mat-card class="example-card content">
+      <mat-card-content>
+        <span class="topic">Post</span>
+        <form class="example-form">
+          <mat-form-field class="example-full-width-height">
+            <mat-label>Topic</mat-label>
+            <input matInput placeholder="Placeholder" value="" name="topic" [(ngModel)]="data.topic">
+          </mat-form-field>
+          <mat-form-field class="example-full-width-height">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Placeholder" name="description" [(ngModel)]="data.description" ></textarea>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <form>
+          <mat-form-field appearance="fill">
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="data.category" name="category">
+              <mat-option  *ngFor="let categorys of category" [value]="categorys.value">
+                {{categorys.viewValue}}
+              </mat-option>
+
+            <!-- <textarea matInput placeholder="Enter your category." name="category" [(ngModel)]="postdataAdd.category" ></textarea> -->
+
+            </mat-select>
+          </mat-form-field>
+
+          <!-- <p> Selected category: {{selectedValue}} </p> -->
+
+        </form>
+      </mat-card-actions>
+      <mat-card-actions>
+        <button mat-raised-button (click)="submitUpdate()" color="primary">
+      บันทึก
+    </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,35 @@
+<div class="content">
+  <mat-card class="example-card content">
+    <mat-card-content>
+      <span class="topic">Post</span>
+      <form class="example-form">
+        <mat-form-field class="example-full-width-height">
+          <mat-label>Topic</mat-label>
+          <input matInput placeholder="Enter your topic." value="" name="topic" [(ngModel)]="postdataAdd.topic">
+        </mat-form-field>
+        <mat-form-field class="example-full-width-height">
+          <mat-label>Description</mat-label>
+          <textarea matInput placeholder="Enter your description." name="description" [(ngModel)]="postdataAdd.description" ></textarea>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>Category</mat-label>
+          <mat-select [(ngModel)]="postdataAdd.category" name="category">
+            <mat-option  *ngFor="let categorys of category" [value]="categorys.value">
+              {{categorys.viewValue}}
+            </mat-option>
+          <!-- <textarea matInput placeholder="Enter your category." name="category" [(ngModel)]="postdataAdd.category" ></textarea> -->
+          </mat-select>
+        </mat-form-field>
+        <!-- <p> Selected category: {{selectedValue}} </p> -->
+      </form>
+    </mat-card-actions>
+    <mat-card-actions>
+      <button mat-button>Cancle</button>
+      <button mat-button (click)="submitReviewAdd()" routerLink="/">Enter</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
